@@ -24,6 +24,7 @@ WORKDIR /root
 
 # Copy the startup script and run it
 ADD vnc-startup.sh /
+RUN chmod +x /vnc-startup.sh
 
 #  Launch the command and run
 CMD ["/bin/bash", "/vnc-startup.sh", "--no-exit"]
